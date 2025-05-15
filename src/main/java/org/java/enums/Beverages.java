@@ -1,18 +1,17 @@
 package org.java.enums;
 
-public enum Type {
-    Large(200),
-    Medium(100),
-    Small(50);
+public enum Beverages {
+    Mojito(100),
+    Coke(50),
+    Limca(40);
 
     private int cost;
 
-    Type(int cost){
+    Beverages(int cost) {
         this.cost = cost;
     }
 
     public int getCost() {
         return cost;
     }
-
 }

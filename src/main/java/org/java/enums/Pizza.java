@@ -1,10 +1,11 @@
 package org.java.enums;
 
 public enum Pizza {
-    CheeseBurst(400),
-    Farmhouse(450);
+    CheeseBurst(100),
+    Farmhouse(70);
 
     private int cost;
+
 
     Pizza(int cost){
         this.cost = cost;
