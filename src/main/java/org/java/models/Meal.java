@@ -35,4 +35,15 @@ public class Meal {
     public void setDrinks(Beverages drinks) {
         this.drinks = drinks;
     }
+
+    @Override
+    public String toString() {
+        return "Pizza: " + pizza.getName().name() +
+                "\nBase: " + pizza.getBase().name() +
+                "\nToppings: " + pizza.getIngredients().stream().map(Enum::name).toList() +
+                "\nDrink: " + drinks.name() +
+                "\nMeal Price: $" + (pizza.getCost() + drinks.getCost()) +
+                "\n--------------------------";
+    }
+
 }

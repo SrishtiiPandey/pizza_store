@@ -9,16 +9,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
-    private List<Menu> cart = new ArrayList<>();
+    private List<Meal> meals ;
 
-    public Cart(List<Menu> cart) {
-        this.cart = cart;
+    public Cart() {
+        this.meals = new ArrayList<>();
     }
 
-    public Cart() {}
+    public void addCart(Meal meal) {
+        meals.add(meal);
+    }
+
+    public List<Meal> getMeals() {
+        return meals;
+    }
+
 
     @Override
     public String toString() {
-        return "Cart";
+        return "Cart" ;
     }
 }

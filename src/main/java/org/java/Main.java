@@ -2,7 +2,9 @@ package org.java;
 
 
 import org.java.enums.*;
+import org.java.models.Cart;
 import org.java.models.Menu;
+import org.java.models.Meal;
 import org.java.models.Pizza;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,19 +14,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        List<Ingredient> toppings = new ArrayList<>();
-        toppings.add(Ingredient.Chicken);
-        toppings.add(Ingredient.Cheese);
-        Type type;
-        List<Ingredient> ingredients = new ArrayList<>();
-        ingredients.add(Ingredient.Panner);
-        Pizza pizza = new Pizza(org.java.enums.Pizza.CheeseBurst, ingredients, Base.GLUTENFREE);
 
-        Beverages drink;
-        Menu menu = new Menu(toppings, Type.Large, pizza, Beverages.Coke );
+        //Creating instance of class menu
+        Menu menu = new Menu() {};
 
-        System.out.println(menu);
-        System.out.println(menu.getPrice());
+        //Printing the menu , using for loop for it
+        System.out.println("--------- MENU ---------");
+        for (Meal meal : menu.getMeals()) {
+            System.out.println(meal);
+        }
+        System.out.println("------------------------");
 
 
     }
